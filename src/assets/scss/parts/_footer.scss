@@ -17,29 +17,40 @@
 
 .footer__wrapper {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
 
   width: 100%;
 
+  padding-bottom: 2.6rem;
   padding-left: 2rem;
   padding-right: 2rem;
   box-sizing: border-box;
 
-  background-color: $lightbrown;
+  background-color: #F8F1E2;
 }
 
-.footer__title {
-  margin-right: auto;
-  font-size: $l-Fs;
-  font-weight: 300;
-  color: $base;
+.footer__btn {
+  @include no-btn;
+  width: 25rem;
+  height: 5rem;
 
+  margin-bottom: 2.5rem;
+
+  font-size: $xxs-Fs;
+  font-weight: bold;
+  color: $dark-txt;
+  text-transform: uppercase;
+
+  background-color: #E3CEA3;
 }
 
-.footer__link {
-  font-size: $s-Fs;
-  color: $base;
+.ndv__footer-copy {
+  width: 25rem;
 
-  text-decoration: none;
+  padding-left: 2rem;
+
+  font-size: $xxs-Fs;
+  color: $dark-txt;
 }

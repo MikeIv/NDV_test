@@ -27,8 +27,8 @@
         </div>
     </div>
 
-<!--  mob menu  -->
 
+<!--  mob menu  -->
     <section class="header__mob-menu" v-if="modal">
         <h2 class="v-hidden">Мобильное меню</h2>
         <button class="header__mob-menu-close" @click="modal = false">
@@ -36,6 +36,61 @@
                 <use xlink:href="#icon-close"></use>
             </svg>
         </button>
+
+        <div class="header__wrapper header__wrapper--mob">
+            <a href="#" class="header__logo">
+                <img src="img/logo-ndv.svg" alt="логотип компании" class="header__logo-img">
+            </a>
+            <div class="header__cell header__cell--mob-menu">
+                <button class="header__link-btn">Выбрать квартиру</button>
+            </div>
+        </div>
+
+        <div class="header__mob-menu-content">
+            <ul class="header__mob-menu-list">
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">О ПРОЕКТЕ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">ВЫБРАТЬ КВАРТИРУ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">УСЛОВИЯ ПОКУПКИ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">РАСПОЛОЖЕНИЕ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">ДОКУМЕНТАЦИЯ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">НОВОСТИ</a>
+                </li>
+                <li class="header__mob-menu-item">
+                    <a href="" class="header__mob-menu-link">КОНТАКТЫ</a>
+                </li>
+            </ul>
+
+            <div class="header__mob-menu-info">
+                <div class="header__mob-menu-info-top">
+                    <p
+                      class="header__mob-menu-info-txt header__mob-menu-info-txt--lh header__mob-menu-info-txt--top-icon-01">камеры онлайн</p>
+                    <p class="header__mob-menu-info-txt header__mob-menu-info-txt--top-icon-02">виртуальный тур</p>
+                </div>
+                <div class="header__mob-menu-info-phone">
+                    <p
+                      class="header__mob-menu-info-txt header__mob-menu-info-txt--xl-sz header__mob-menu-info-txt--color-lbr">8 495 988 44 22</p>
+                    <p class="header__mob-menu-info-txt header__mob-menu-info-txt--bold">Заказать звонок</p>
+                </div>
+                <div class="header__mob-menu-info-adr">
+                    <p
+                      class="header__mob-menu-info-txt header__mob-menu-info-txt--bold header__mob-menu-info-txt--color-br">Москва,</p>
+                    <p class="header__mob-menu-info-txt header__mob-menu-info-txt--bold header__mob-menu-info-txt--color-br">Лосиноостровская улица, вл45</p>
+                </div>
+
+            </div>
+
+        </div>
 
     </section>
 

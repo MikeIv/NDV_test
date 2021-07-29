@@ -22,6 +22,7 @@
   background-image: url("/img/mob-bg.jpg");
   background-size: cover;
   background-position-x: 45%;
+  background-repeat: no-repeat;
 }
 
 .ndv__title-block {
@@ -112,6 +113,19 @@
     height: 1.7rem;
 
     background-image: url("/img/icon-phone.svg");
+    background-repeat: no-repeat;
+  }
+  &--icon-ring:before {
+    position: absolute;
+    content: '';
+    top: -1.3rem;
+    left: calc(50% - 0.8rem);
+
+    width: 1.7rem;
+    height: 1.7rem;
+
+    background-image: url("/img/icon-ring.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -136,6 +150,13 @@
     padding-bottom: 5rem;
     padding-left: 3.8rem;
     padding-right: 3.8rem;
+    box-sizing: border-box;
+  }
+
+  &--spec {
+    min-height: 32rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     box-sizing: border-box;
   }
 
@@ -320,5 +341,158 @@
   }
   &--mb {
     margin-bottom: 3rem;
+  }
+}
+
+
+// Gallary block
+.ndv__gl-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.ndv__gl-item {
+  display: flex;
+  align-items: flex-end;
+
+  width: 100%;
+  min-height: 21rem;
+
+  padding-bottom: 2.4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+
+  &--bg-01 {
+    background-image: url("/img/gl-bg-01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &--bg-02 {
+    background-image: url("/img/gl-bg-02.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &--bg-03 {
+    background-image: url("/img/gl-bg-03.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &--bg-04 {
+    background-image: url("/img/gl-bg-04.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &--bg-05 {
+    background-image: url("/img/gl-bg-05.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.ndv__gl-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.ndv__gl-txt {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: $white;
+
+  & span {
+    font-size: 1.8rem;
+  }
+
+}
+
+
+// Specificity block
+.ndv__spec-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+
+  width: 100%;
+
+  margin-bottom: 8rem;
+
+}
+
+.ndv__spec-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 11rem;
+  height: 10rem;
+
+  &--icon-01:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url("/img/icon-spec-01.svg");
+    background-size: cover;
+  }
+  &--icon-02:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url("/img/icon-spec-02.svg");
+    background-size: cover;
+  }
+  &--icon-03:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url("/img/icon-spec-03.svg");
+    background-size: cover;
+  }
+  &--icon-04:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+
+    width: 4rem;
+    height: 4rem;
+
+    background-image: url("/img/icon-spec-04.svg");
+    background-size: cover;
+  }
+}
+
+.ndv__spec-item-txt {
+  font-size: $mainFs;
+  font-weight: bold;
+  color: $dark-txt;
+
+  &--title {
+    font-size: $s-Fs;
+    color: #9E7B56;
   }
 }
