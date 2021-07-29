@@ -1,0 +1,43 @@
+.footer {
+  grid-area: footer;
+
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  font-family: $mainFont;
+
+  @media screen and (min-width: 768px) {
+
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+
+  background-color: $neutral-300;
+}
+
+.footer__title {
+  margin-right: auto;
+  font-size: $l-Fs;
+  font-weight: 300;
+  color: $base;
+
+}
+
+.footer__link {
+  font-size: $s-Fs;
+  color: $base;
+
+  text-decoration: none;
+}
