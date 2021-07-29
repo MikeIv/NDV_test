@@ -29,6 +29,15 @@
   box-sizing: border-box;
 
   background-color: #F8F1E2;
+
+  @media screen and (min-width: 768px) {
+   flex-direction: row;
+    justify-content: space-between;
+
+    padding-bottom: 0;
+    padding-left: 5.6rem;
+    padding-right: 5.6rem;
+  }
 }
 
 .footer__btn {
@@ -44,6 +53,11 @@
   text-transform: uppercase;
 
   background-color: #E3CEA3;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+    order: 2;
+  }
 }
 
 .ndv__footer-copy {
@@ -53,4 +67,8 @@
 
   font-size: $xxs-Fs;
   color: $dark-txt;
+
+  @media screen and (min-width: 768px) {
+
+  }
 }
