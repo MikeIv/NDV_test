@@ -13,6 +13,11 @@
   @media screen and (min-width: 768px) {
     height: 43.4rem;
   }
+
+  @media screen and (min-width: 1100px) {
+    height: 67.5rem;
+    margin-top: 0;
+  }
 }
 
 .ndv__block {
@@ -27,8 +32,44 @@
   background-size: cover;
   background-position-x: 45%;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 1100px) {
+    flex-direction: row;
+    justify-content: flex-start;
+
+    background-image: url("/img/desktop-bg.jpg");
+  }
 }
 
+
+// Sidebar
+.ndv__sidebar {
+  display: none;
+
+  @media screen and (min-width: 1100px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 31rem;
+
+    background-color: rgba($base, 80%);
+  }
+}
+
+.ndv__sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 31rem;
+}
+
+
+
+
+// Title block
 .ndv__title-block {
   position: relative;
   display: flex;
@@ -58,6 +99,10 @@
     &:before {
       left: 5rem;
     }
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: auto;
   }
 }
 
