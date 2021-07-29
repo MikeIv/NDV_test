@@ -8,10 +8,9 @@
 .page__body {
   display: grid;
   grid-template-areas:
-  "header"
   "main"
   "footer";
-  grid-template-rows: 6rem 1fr 6rem;
+  grid-template-rows: 1fr 24rem;
   grid-template-columns: 1fr;
 
   height: 100vh;

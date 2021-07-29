@@ -10,39 +10,80 @@
 	}
 }
 
-// Font-size
-@mixin vue-h3 {
-	font-size: 2rem;
-	font-weight: normal;
-	line-height: 1.25;
+
+// Typography
+@mixin h2 ($size:"1.8rem", $color: "#195676") {
+	margin-bottom: 1rem;
+	font-size: #{$size};
+	color: #{$color};
 }
 
-@mixin vue-h4 {
-	font-size: 1.8rem;
-	font-weight: bold;
-	line-height: 1.25;
+@mixin h3 ($size:"1.6rem", $color: "#E28229") {
+	margin-bottom: 1rem;
+	font-size: #{$size};
+	color: #{$color};
+}
+
+@mixin txt ($size:"1.4rem", $lheight:"1.8rem", $color: "#000000") {
+	font-size: #{$size};
+	line-height: #{$lheight};
+	color: #{$color};
+
 }
 
 
 
-// Blocks
-@mixin container($max-width:"120rem", $padding:"2rem") {
-	width: 100%;
-	max-width: #{$max-width};
-	padding: 0 #{$padding};
-	margin: 0 auto;
-}
-
-
-// Background
 @mixin bg ($size:"contain", $position: "center") {
 	background-size: #{$size};
 	background-position: #{$position};
 	background-repeat: no-repeat;
 }
 
+// btn
+@mixin btn ($width:"18rem", $height:"4rem", $fs:"1.4rem") {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 1;
 
-// Buttons
+	min-width: #{$width};
+	height: #{$height};
+
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	box-sizing: border-box;
+
+	font-size: #{$fs};
+	font-weight: 700;
+	color: $white;
+	text-transform: uppercase;
+
+	background-color: $vue;
+	border-radius: 0.5rem;
+	border: none;
+
+	cursor: pointer;
+	user-select: none;
+
+	&:hover {
+		background-color: $darkvue;
+	}
+}
+
+@mixin no-btn () {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: none;
+	background-color: $white;
+}
+
+
 @mixin btn_anim($scaleMax:1.05, $scaleMin:0.95) {
 	transform-origin: center center;
 	transition: all ease-out 240ms;
@@ -64,34 +105,65 @@
 	}
 }
 
-@mixin no-btn ($display:"inline-block") {
-	padding: 0;
-	margin: 0;
-	border: 0;
-	background-color: transparent;
-	border-radius: 0;
-	cursor: pointer;
-	appearance: none;
-	display: #{$display};
-}
 
-
-
-// Transition
 @mixin transit ($tr:0.24) {
 	transition: all #{$tr}s;
 }
 
+// Block
+@mixin block ($padding:"0") {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 40%;
+	min-height: 3rem;
+	padding: #{$padding};
 
-
-// Shadow
-@mixin box-shadow ($hor:0, $ver:2, $blure:12, $spr:0) {
-	box-shadow: #{$hor}px
-				#{$ver}px
-				#{$blure}px
-				#{$spr}px rgba(0, 0, 0, 0.1)
 }
 
+// Label
+@mixin label ($height:"2rem", $padding:"1rem") {
+	height: #{$height};
+	margin-top: 2rem;
+	padding: 0 #{$padding};
+	font-size: $xs-Fs;
+	color: $darkgray;
+}
 
+// Input
+@mixin input ($height:"4rem", $padding:"2rem") {
+	height: #{$height};
+	margin-bottom: 2rem;
+	padding: 0 #{$padding};
+	font-size: $mainFs;
+	color: $darkgray;
+	border: 1px solid $gray;
+	border-radius: 0.3rem;
+	background-color: rgba($base, 0.1);
+
+	&::placeholder {
+		font-size: $mainFs;
+		font-weight: 300;
+		color: $gray;
+	}
+}
+
+// Textarea
+@mixin textarea ($height:"12rem", $padding:"2rem") {
+	height: #{$height};
+	margin-bottom: 2rem;
+	padding: #{$padding};
+	font-size: $mainFs;
+	color: $darkgray;
+	border: 1px solid $gray;
+	border-radius: 0.3rem;
+	background-color: rgba($base, 0.1);
+}
+
+// Box-shadow
+@mixin b-shadow ($v:"1px", $bl:"4px") {
+	box-shadow: 0 #{$v} #{$bl} 0 rgba(0, 0, 0, 0.1);
+}
 
 
