@@ -52,8 +52,10 @@
     justify-content: flex-start;
 
     width: 31rem;
+    height: 100%;
 
-    background-color: rgba($base, 80%);
+    background: linear-gradient(360deg, rgba(227, 206, 163, 0.448) 0%, rgba(11, 53, 29, 0) 99.03%), #0B351D;
+    opacity: 0.9;
   }
 }
 
@@ -64,6 +66,90 @@
   align-items: center;
 
   width: 31rem;
+  padding-top: 4rem;
+
+}
+
+.ndv__sidebar-logo {
+  width: 17rem;
+  height: 11rem;
+
+  margin-bottom: 5rem;
+}
+
+.ndv__sidebar-logo-img {
+  width: 100%;
+  height: 100%;
+}
+
+.ndv__sidebar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin-bottom: 3rem;
+  padding-left: 7rem;
+  box-sizing: border-box;
+}
+
+.ndv__sidebar-item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 3rem;
+}
+
+.ndv__sidebar-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E3CEA3;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.ndv__sidebar-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 5rem;
+  box-sizing: border-box;
+}
+
+.ndv__sidebar-item {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  height: 3.5rem;
+}
+
+.ndv__sidebar-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #E3CEA3;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.ndv__sidebar-btn {
+  @include no-btn;
+
+  min-width: 16.8rem;
+  height: 4.1rem;
+
+  font-size: $xxs-Fs;
+  font-weight: bold;
+  color: $dark;
+  text-transform: uppercase;
+
+  background-color: $lightbrown;
+
 }
 
 
@@ -103,6 +189,8 @@
 
   @media screen and (min-width: 1100px) {
     width: auto;
+    margin-top: auto;
+    padding-bottom: 4rem;
   }
 }
 
@@ -112,6 +200,10 @@
   font-size: $xxl-Fs;
   font-weight: bold;
   color: $lightbrown;
+
+  @media screen and (min-width: 1100px) {
+    font-size: 5rem;
+  }
 }
 
 .ndv__txt {
@@ -128,6 +220,12 @@
   }
   &--lh {
     line-height: 2.4rem;
+  }
+
+  @media screen and (min-width: 1100px) {
+    font-size: 4.8rem;
+    line-height: 4.1rem;
+
   }
 }
 
@@ -212,8 +310,10 @@
   }
 
   &--pr {
-    @media screen and (min-width: 768px) {
-
+    @media screen and (min-width: 1100px) {
+      height: 32.8rem;
+      padding-left: 7rem;
+      padding-right: 7rem;
     }
   }
 
@@ -224,6 +324,11 @@
     padding-left: 3.8rem;
     padding-right: 3.8rem;
     box-sizing: border-box;
+
+    @media screen and (min-width: 1100px) {
+      padding-left: 7rem;
+      padding-right: 7rem;
+    }
   }
 
   &--spec {
@@ -293,6 +398,16 @@
       padding-left: 0;
     }
   }
+
+  @media screen and (min-width: 1100px) {
+    min-width: 30rem;
+    padding-left: 1rem;
+
+    font-size: 1.8rem;
+    &:before {
+      display: none;
+    }
+  }
 }
 
 .ndv__adr-list {
@@ -336,6 +451,7 @@
     height: 3rem;
 
     background-image: url("/img/icon-metro.svg");
+    background-repeat: no-repeat;
   }
   &--pink:before {
     position: absolute;
@@ -347,10 +463,40 @@
     height: 3rem;
 
     background-image: url("/img/icon-metro-pink.svg");
+    background-repeat: no-repeat;
+  }
+  &--desktop {
+    display: none;
   }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1100px) {
+    &--desktop {
+      display: flex;
+    }
+    &:before {
+      width: 3.7rem;
+      height: 3.7rem;
+      background-size: cover;
+    }
+    &--pink:before {
+      width: 3.7rem;
+      height: 3.7rem;
+    }
+    &--desktop:before {
+      position: absolute;
+      content: '';
+      top: 0.5rem;
+      left: 0;
+
+      width: 3.7rem;
+      height: 3.7rem;
+
+      background-image: url("/img/icon-pin-dt.svg");
+    }
   }
 }
 
@@ -374,6 +520,15 @@
       height: 1.6rem;
 
       background-image: url("/img/icon-car.svg");
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 1.8rem;
+
+    &:before {
+      top: 0.3rem;
+      left: 8rem;
     }
   }
 }
@@ -498,6 +653,18 @@
   "gl-04 gl-05";
     grid-template-rows: 31rem 31rem 31rem 31rem;
     grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1100px) {
+    grid-template-areas:
+  "gl-01 gl-01 gl-03 gl-05"
+  "gl-04 gl-02 gl-02 gl-05";
+    grid-template-rows: 25rem 25rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    padding-left: 7rem;
+    padding-right: 7rem;
+    box-sizing: border-box;
   }
 }
 
