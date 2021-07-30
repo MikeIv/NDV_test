@@ -82,7 +82,7 @@
   }
 
   @media screen and (min-width: 768px) {
-
+    margin-right: 3rem;
   }
 }
 
@@ -115,7 +115,8 @@
   background-color: $lightbrown;
 
   @media screen and (min-width: 768px) {
-    margin-right: 1.6rem;
+    min-width: 16.8rem;
+    margin-right: 3rem;
   }
 
 }
@@ -174,6 +175,10 @@
   fill: $lightbrown;
 
   background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    right: 6rem;
+  }
 }
 
 .header__mob-menu-content {
@@ -186,6 +191,15 @@
   margin-left: 2rem;
   padding-top: 3.5rem;
   box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+
+    width: 100%;
+
+    padding-top: 7rem;
+    padding-left: 3.6rem;
+  }
 }
 
 .header__mob-menu-list {
@@ -198,6 +212,11 @@
   margin-bottom: 2.5rem;
   padding-left: 2rem;
   box-sizing: border-box;
+
+  @media screen and (min-width: 768px) {
+    width: 25rem;
+    margin-bottom: 0;
+  }
 }
 
 .header__mob-menu-item {
@@ -222,6 +241,11 @@
   justify-content: flex-start;
 
   width: 100%;
+
+  @media screen and (min-width: 768px) {
+    justify-content: space-between;
+    width: auto;
+  }
 }
 
 .header__mob-menu-info-top {
@@ -297,6 +321,22 @@
   margin-bottom: 1.5rem;
   padding-left: 2rem;
   box-sizing: border-box;
+
+  &--tablet {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    &--tablet {
+      display: flex;
+      margin-bottom: 0;
+      margin-right: 3rem;
+    }
+     &--tablet-mob {
+      display: none;
+    }
+
+  }
 }
 
 .header__mob-menu-info-adr {
